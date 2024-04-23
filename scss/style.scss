@@ -1,0 +1,128 @@
+@import '_button.scss';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8em 0 8em;
+	font-family: "Open Sans", sans-serif;
+	color: #fff;
+	background-color: #333;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    width: 100%;
+    min-width: 1030px;
+    background-color: #000;
+}
+
+table{
+    text-align: center;
+    border-collapse: collapse;
+    td,th{
+        padding: 1em 5em 1em 0;
+        border-top: 1px solid black;
+    
+    }
+
+    tr{
+        transition: 0.3s;
+    }
+    tr:hover{
+        //background-color: rgb(59, 59, 59);
+        transform: scale(0.99);
+    }
+
+    input{
+        padding: 0.6em 1.2em;
+    }
+
+  
+}
+.input-person{
+    display: flex;
+    margin-top: 1.5em;
+    input{
+        padding: 0.6em 1.2em;
+        margin-right: 6.5em;
+        border-radius: 4px;
+        color: #999;
+    }
+
+    .box{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        p{
+            position: absolute;
+            top: 150%;
+            left: 35%;
+            transform: translate(-50%,-50%);
+            color: red;
+            font-size: 1.3rem;
+        }
+        input{
+            min-width: 10px;
+        }
+    }
+}
+
+.edit-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    p{
+        position: absolute;
+        top: 145%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%,-50%);
+        color: red;
+        font-size: 1.3rem;
+    }
+}
+
+.error-message{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2em;
+    color: red;
+    text-align: center;
+}
+
+.display-none{
+    display: none;
+}
+
+.display-block{
+    display: block;
+}
+
+.display-tablerow{
+    display: table-row;
+}
+
+td:nth-child(6){
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+tr:hover{
+    td:nth-child(6){
+        opacity: 1;
+    }
+}
